@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <title>2.using-with-react - CLOVA Chatbot Web Kit</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.6/examples/jumbotron/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <meta name="theme-color" content="#563d7c" />
+
+    <!-- Custom styles for this template -->
+    <link href="template.css" rel="stylesheet" />
+    <style>
+      #chat {
+        display: none;
+        position: fixed;
+        right: 40px;
+        bottom: 0;
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+      }
+
+      @media (max-width: 575px) {
+        #chat {
+          right: 0;
+        }
+      }
+
+      #chat-button {
+        position: fixed;
+        right: 40px;
+        bottom: 40px;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(54, 129, 254);
+        color: #fff;
+        font-size: 30px;
+        line-height: 30px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px 0 rgba(117, 117, 117, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+      }
+
+      #chat-button:hover {
+        cursor: pointer;
+        background-color: rgba(54, 129, 254, 0.8);
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+      }
+    </style>
+    <script
+      crossorigin="anonymous"
+      src="https://unpkg.com/@babel/standalone@7.11.2/babel.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://unpkg.com/react@16.13.1/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"
+    ></script>
+    <script src="http://localhost:8080/webchat.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CLOVA Chatbot Web Kit</a>
+      </div>
+    </nav>
+
+    <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Hello, world!</h1>
+          <p>
+            CLOVA Chatbot is equipped with a powerful conversation model engine
+            that applies Naver's data and know-how, so you can develop chatbots
+            that satisfy various customer needs.
+          </p>
+          <p>
+            <a class="btn btn-primary btn-open" role="button">Open Web Chat</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div id="chat"></div>
+    <div id="chat-button">
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 16 16"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 01-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/babel" data-presets="es2015,react,stage-3">
+      (async function () {
+        const { ReactWebChat } = window.WebChat;
+        const root = document.querySelector("#chat");
+        const props = {
+          root,
+          apiPath: "http://localhost:8080/",
+          width: "360px",
+          height: "600px",
+          title: "Using with React",
+          placeholder: "Please enter a question",
+          // backgroundColor: 'rgb(240,240,240)',
+          backgroundImage: "",
+          avatarBackgroundColor: "#bbbfc3",
+          avatarImage: "",
+          bubbleStyle: "rounded", // [rounded, square]
+          bubbleRadius: "12px 6px",
+          bubbleColor: "rgb(80,80,80)",
+          bubbleBackgroundColor: "rgb(255,255,255)",
+          bubbleFontSize: "14px",
+        };
+        window.ReactDOM.render(<ReactWebChat {...props} />, root);
+      })().catch((err) => console.error(err));
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

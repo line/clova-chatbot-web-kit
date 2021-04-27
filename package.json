@@ -1,0 +1,59 @@
+{
+  "name": "@line/clova-chatbot-web-kit",
+  "version": "1.0.0",
+  "main": "",
+  "repository": "https://github.com/line/clova-chatbot-web-kit.git",
+  "author": "LINE CLOVA",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "heroku-prebuild": "yarn install && yarn bootstrap",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run --stream build && npm run copy",
+    "build-dev": "lerna run --stream build-dev && npm run copy",
+    "copy": "cpx -C packages/clova-chatbot-web-kit-bundle/dist/** packages/clova-chatbot-web-kit-server/static",
+    "start": "lerna run --stream --scope @line/clova-chatbot-web-kit-server start",
+    "start-dev": "lerna run --stream --scope @line/clova-chatbot-web-kit-server start-dev",
+    "start-javascript-sample": "",
+    "lint": "lerna run --stream lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "core-js": "^3.6.5",
+    "cpx": "^1.5.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.3.0",
+    "lodash": "^4.17.20",
+    "prettier": "^2.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

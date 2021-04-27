@@ -1,0 +1,51 @@
+{
+  "name": "@line/clova-chatbot-web-kit-server",
+  "version": "1.0.0",
+  "description": "",
+  "author": "LINE CLOVA",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/line/clova-chatbot-web-kit.git",
+    "directory": "packages/clova-chatbot-web-kit-server"
+  },
+  "scripts": {
+    "start-dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start-test": "cross-env NODE_ENV=test nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production node src/index.js",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint src --ext .js,.jsx,.json --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "date-fns": "^2.16.1",
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "helmet": "^4.4.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.3.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1"
+  }
+}

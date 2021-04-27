@@ -1,0 +1,78 @@
+{
+  "name": "@line/clova-chatbot-web-kit-components",
+  "version": "1.0.0",
+  "description": "",
+  "author": "LINE CLOVA",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/line/clova-chatbot-web-kit.git",
+    "directory": "packages/clova-chatbot-web-kit-components"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src -d lib",
+    "build-dev": "cross-env NODE_ENV=development babel src -d lib",
+    "lint": "eslint src --ext .js,.jsx,.json --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.16.1",
+    "prop-types": "^15.7.2",
+    "react-icons": "^3.11.0",
+    "react-perfect-scrollbar": "^1.5.8",
+    "simplebar-react": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/react": "^6.1.20",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.1",
+    "react-is": "^16.13.1"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "CLOVA Webchat",
+    "description": "CLOVA Chatbot is equipped with a powerful conversation model engine that applies Naver's data and know-how, so you can develop chatbots that satisfy various customer needs.",
+    "repository": "https://github.com/line/clova-chatbot-ui-kit",
+    "keywords": ["webchat", "clova", "line"],
+    "env": {
+        "CLOVA_SECRET_KEY": {
+          "description": "chatbot custom secret key.",
+          "value": ""
+        },
+        "CLOVA_INVOKE_URL": {
+          "description": "chatbot api gateway url.",
+          "value": ""
+        },
+        "ALLOW_URL": {
+          "description": "allow request url. default is allow all url.",
+          "value": "[]"
+        },
+        "NPM_CONFIG_PRODUCTION": {
+          "description": "do not edit here.",
+          "value": "false"
+        }
+    }
+}
