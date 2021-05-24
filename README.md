@@ -198,7 +198,7 @@ heroku restart --remote proxy-server
 
 # How to contribute
 
-First of all, thank you so much for taking your time to contribute! clova-chatbot-webk-it is not very different from any other open source projects you are aware of. It will be amazing if you could help us by doing any of the following:
+First of all, thank you so much for taking your time to contribute! clova-chatbot-web-kit is not very different from any other open source projects you are aware of. It will be amazing if you could help us by doing any of the following:
 
 - File an issue in [the issue tracker](https://github.com/line/clova-chatbot-web-kit/issues) to report bugs and propose new features and
   improvements.
