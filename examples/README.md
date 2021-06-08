@@ -1,6 +1,6 @@
 # Examples
 
-| Sample Name                              | Description                                                                                             | Demo Site |
+| Sample Name                              | Description                                                                                             | Demo Page |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------- |-----------------|
 | [1.getting-started](1.getting-started)   | This is the simplest method to customize a web chat using JavaScript.                                   |[here](https://clovachatbot-webkit.line-scdn.net/samplepage/getting-started/index.html)|
 | [2.using-with-react](2.using-with-react) | A sample to use a web chat in a website using React.                                                    |[here](https://clovachatbot-webkit.line-scdn.net/samplepage/using-with-react/index.html)|

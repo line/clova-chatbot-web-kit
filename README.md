@@ -12,6 +12,8 @@ For more information on [CLOVA Chatbot](https://clova.line.me/clova-chatbot/), s
 - [CLOVA Chatbot](https://clova.line.me/clova-chatbot/)
 - [CLOVA Chatbot API Reference](https://apidocs.ncloud.com/ja/ai-application-service/chatbot/)
 
+CLOVA Chatbot Web Kit Demo page is [here](https://clovachatbot-webkit.line-scdn.net/samplepage/using-events/index.html) and, for more examples see [here](https://github.com/line/clova-chatbot-web-kit/blob/master/examples/README.md)
+
 # How to use CLOVA Chatbot Web Kit
 
 First, create a bot using `CLOVA Chatbot`. Once the bot is created, you will need to obtain the bot's web chat `Secret Key` and `Invoke URL` in [CLOVA Chatbot Setting](https://docs.ncloud.com/en/chatbot/chatbot-2-5.html).
@@ -45,6 +47,8 @@ const env = {
 ### Integrating with CDN
 
 If you don't want to build and host `webchat.js` yourself, you can include it from a CDN (Content Delivery Network).
+
+The URI of `webchat.js` is defined as `https://clovachatbot-webkit.line-scdn.net/webchat/webchat-{version}.js`. See Tag for `{version}`.
 
 ```html
 <head>
