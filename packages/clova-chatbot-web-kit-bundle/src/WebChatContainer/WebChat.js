@@ -12,6 +12,32 @@ import {
 import { usePostMessage, useResponsive } from '../hooks'
 
 const Wrapper = styled.div`
+  /* part of bootstrap reboot.css https://raw.githubusercontent.com/twbs/bootstrap/v4-dev/dist/css/bootstrap-reboot.css*/
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  p {
+    margin-top: 0;
+    //margin-bottom: 1rem;
+  }
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  a:not([href]):not([class]) {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  /* */
   position: relative;
   width: 100%;
   height: 100%;
