@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { MdSend } from 'react-icons/md'
+import { StyleContext } from '../../context'
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,6 +12,10 @@ const Wrapper = styled.div`
   height: 50px;
   width: 100%;
   background-color: white;
+  border-bottom-left-radius: ${(props) =>
+    props.borderBottomLeftRadius ? `${props.borderBottomLeftRadius}` : `0`};
+  border-bottom-right-radius: ${(props) =>
+    props.borderBottomRightRadius ? `${props.borderBottomRightRadius}` : `0`};
   box-sizing: border-box;
 `
 
@@ -49,6 +54,8 @@ const propTypes = {
 const WebChatSendBox = (props) => {
   const { userId, placeholder, onSendMessage } = props
   const [text, setText] = useState('')
+  const styles = useContext(StyleContext)
+  const { borderBottomLeftRadius, borderBottomRightRadius } = styles
 
   const handleChange = (e) => {
     setText(e.target.value)
@@ -63,7 +70,7 @@ const WebChatSendBox = (props) => {
     }
   }
 
-  const handleSendMessage = (e) => {
+  const handleSendMessage = () => {
     if (text === '') return
 
     onSendMessage({ userId, text })
@@ -71,7 +78,11 @@ const WebChatSendBox = (props) => {
   }
 
   return (
-    <Wrapper className="web-chat-send-box">
+    <Wrapper
+      className="web-chat-send-box"
+      borderBottomLeftRadius={borderBottomLeftRadius}
+      borderBottomRightRadius={borderBottomRightRadius}
+    >
       <MessageInput
         placeholder={placeholder}
         value={text}

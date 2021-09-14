@@ -8,7 +8,13 @@ export const defaultStyles = {
   placeholder: 'Do you have any questions?',
   backgroundColor: '#7793bf',
   backgroundImage: '',
+  borderTopLeftRadius: '',
+  borderTopRightRadius: '',
+  borderBottomRightRadius: '',
+  borderBottomLeftRadius: '',
   headerHeight: '50px',
+  headerColor: '#ffffff',
+  headerBackgroundColor: '#303b51',
   avatarBackgroundColor: '#bbbfc3',
   avatarImage: '',
   bubbleStyle: 'rounded', // [rounded, square]

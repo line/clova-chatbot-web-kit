@@ -42,10 +42,18 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${(props) => props.backgroundColor};
-  url(${(props) => `background-image: ${props.backgroundImage}`});
+  background-image: url(${(props) => props.backgroundImage});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-top-left-radius: ${(props) =>
+    props.borderTopLeftRadius ? `${props.borderTopLeftRadius}` : `0`};
+  border-top-right-radius: ${(props) =>
+    props.borderTopRightRadius ? `${props.borderTopRightRadius}` : `0`};
+  border-bottom-left-radius: ${(props) =>
+    props.borderBottomLeftRadius ? `${props.borderBottomLeftRadius}` : `0`};
+  border-bottom-right-radius: ${(props) =>
+    props.borderBottomRightRadius ? `${props.borderBottomRightRadius}` : `0`};
   transition: all 0.3s ease-in-out;
   .web-chat-header {
     position: absolute;
@@ -93,6 +101,10 @@ const WebChat = (props) => {
     placeholder,
     backgroundColor,
     backgroundImage,
+    borderTopLeftRadius,
+    borderTopRightRadius,
+    borderBottomLeftRadius,
+    borderBottomRightRadius,
     headerHeight,
   } = styles
 
@@ -110,6 +122,10 @@ const WebChat = (props) => {
       headerHeight={headerHeight}
       backgroundColor={backgroundColor}
       backgroundImage={backgroundImage}
+      borderTopLeftRadius={borderTopLeftRadius}
+      borderTopRightRadius={borderTopRightRadius}
+      borderBottomLeftRadius={borderBottomLeftRadius}
+      borderBottomRightRadius={borderBottomRightRadius}
     >
       <WebChatHeader
         title={title}
