@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { MdPerson } from 'react-icons/md'
 
@@ -25,17 +24,13 @@ const Wrapper = styled.div`
 const AvatarImage = styled.div`
   width: 100%;
   height: 100%;
-  url(${(props) => `background-image: ${props.src}`});
+  background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 `
 
-const propTypes = {
-  imageUrl: PropTypes.string,
-}
-
-const Avatar = (props) => {
+const Avatar = () => {
   const styles = useContext(StyleContext)
   const { avatarBackgroundColor, avatarImage } = styles
 
@@ -46,5 +41,4 @@ const Avatar = (props) => {
   )
 }
 
-Avatar.propTypes = propTypes
 export default Avatar
