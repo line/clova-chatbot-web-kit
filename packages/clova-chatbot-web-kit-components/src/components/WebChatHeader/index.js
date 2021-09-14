@@ -11,9 +11,14 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex: 0 1 auto;
-  background-color: #303b51;
+  background-color: ${(props) =>
+    props.backgroundColor ? `${props.backgroundColor}` : `#303b51`};
   box-sizing: border-box;
   padding: 10px;
+  border-top-left-radius: ${(props) =>
+    props.borderTopLeftRadius ? `${props.borderTopLeftRadius}` : `0`};
+  border-top-right-radius: ${(props) =>
+    props.borderTopRightRadius ? `${props.borderTopRightRadius}` : `0`};
   overflow: hidden;
   :hover {
     cursor: pointer;
@@ -21,7 +26,7 @@ const Wrapper = styled.div`
 `
 
 const TitleWrapper = styled.div`
-  color: white;
+  color: ${(props) => (props.color ? `${props.color}` : `white`)};
 `
 
 const ActionList = styled.ul`
@@ -35,7 +40,7 @@ const ActionList = styled.ul`
     font-size: 20px;
     height: 1em;
     line-height: 1;
-    color: white;
+    color: ${(props) => (props.color ? `${props.color}` : `white`)};
     float: left;
     transition: all 0.3s;
     &:hover {
@@ -57,16 +62,26 @@ const propTypes = {
 const WebChatHeader = (props) => {
   const { title, onClose, onMinimize } = props
   const styles = useContext(StyleContext)
-  const { headerHeight } = styles
+  const {
+    headerHeight,
+    headerColor,
+    headerBackgroundColor,
+    borderTopLeftRadius,
+    borderTopRightRadius,
+  } = styles
 
   return (
     <Wrapper
       className="web-chat-header"
       height={headerHeight}
+      color={headerColor}
+      backgroundColor={headerBackgroundColor}
+      borderTopLeftRadius={borderTopLeftRadius}
+      borderTopRightRadius={borderTopRightRadius}
       onClick={onMinimize}
     >
-      <TitleWrapper>{title}</TitleWrapper>
-      <ActionList>
+      <TitleWrapper color={headerColor}>{title}</TitleWrapper>
+      <ActionList color={headerColor}>
         <li>
           <MdClose onClick={onClose} />
         </li>
