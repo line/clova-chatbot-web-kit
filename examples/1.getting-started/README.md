@@ -54,6 +54,12 @@ All properties are shown in the table below.
 | userBubbleColor           | Overwrite user bubble font color                                        |
 | userBubbleBackgroundColor | Overwrite user bubble background color                                  |
 | userBubbleFontSize        | Overwrite user bubble font size                                         |
+| borderTopLeftRadius       | Radius of the Top-Left                                                  |
+| borderTopRightRadius      | Radius of the Top-Right                                                 |
+| borderBottomRightRadius   | Radius of the Bottom-left                                               |
+| borderBottomLeftRadius    | Radius of the Bottom-Right                                              |
+| headerColor               | Header color                                                            |
+| headerBackgroundColor     | Header background color                                                 |
 
 # Events
 
