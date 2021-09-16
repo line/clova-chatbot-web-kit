@@ -39,11 +39,12 @@ All properties are shown in the table below.
 | width                     | Chat box width                                                          |
 | height                    | Chat box height                                                         |
 | title                     | Chat box title.                                                         |
+| headerHeight              | Header height.                                                          |
 | placeholder               | Placeholder text to display in the text box.                            |
 | backgroundColor           | Chat box background color                                               |
 | backgroundImage           | Chat box background image                                               |
 | avatarBackgroundColor     | Avatar background color                                                 |
-| avatarBackgroundImage     | Avatar background image                                                 |
+| avatarImage　　　　　　　　　　　　　　　　　　　　     | Avatar background image                                                 |
 | bubbleStyle               | Default bubble edge style ( `rounded` or `square`)                      |
 | bubbleRadius              | Default bubble edge rounding when `bubbleStyle` is `rounded`            |
 | bubbleColor               | Default bubble font color                                               |
