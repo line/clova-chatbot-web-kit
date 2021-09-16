@@ -39,11 +39,12 @@ All properties are shown in the table below.
 | width                     | Chat box width                                                          |
 | height                    | Chat box height                                                         |
 | title                     | Chat box title.                                                         |
+| headerHeight              | Header height.                                                          |
 | placeholder               | Placeholder text to display in the text box.                            |
 | backgroundColor           | Chat box background color                                               |
 | backgroundImage           | Chat box background image                                               |
 | avatarBackgroundColor     | Avatar background color                                                 |
-| avatarBackgroundImage     | Avatar background image                                                 |
+| avatarImage　　　　　　　　　　　　　　　　　　　　     | Avatar background image                                                 |
 | bubbleStyle               | Default bubble edge style ( `rounded` or `square`)                      |
 | bubbleRadius              | Default bubble edge rounding when `bubbleStyle` is `rounded`            |
 | bubbleColor               | Default bubble font color                                               |
@@ -54,6 +55,12 @@ All properties are shown in the table below.
 | userBubbleColor           | Overwrite user bubble font color                                        |
 | userBubbleBackgroundColor | Overwrite user bubble background color                                  |
 | userBubbleFontSize        | Overwrite user bubble font size                                         |
+| borderTopLeftRadius       | Radius of the Top-Left                                                  |
+| borderTopRightRadius      | Radius of the Top-Right                                                 |
+| borderBottomRightRadius   | Radius of the Bottom-left                                               |
+| borderBottomLeftRadius    | Radius of the Bottom-Right                                              |
+| headerColor               | Header color                                                            |
+| headerBackgroundColor     | Header background color                                                 |
 
 # Events
 

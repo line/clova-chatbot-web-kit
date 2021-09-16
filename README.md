@@ -52,7 +52,7 @@ The URI of `webchat.js` is defined as `https://clovachatbot-webkit.line-scdn.net
 
 ```html
 <head>
-  <script src="https://clovachatbot-webkit.line-scdn.net/webchat/webchat-1.0.1.js"></script>
+  <script src="https://clovachatbot-webkit.line-scdn.net/webchat/webchat-1.1.0.js"></script>
 </head>
 ```
 
