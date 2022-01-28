@@ -10,7 +10,7 @@ CLOVA Chatbot has a powerful conversation model engine, so you can develop chatb
 For more information on [CLOVA Chatbot](https://clova.line.me/clova-chatbot/), see:
 
 - [CLOVA Chatbot](https://clova.line.me/clova-chatbot/)
-- [CLOVA Chatbot API Reference](https://apidocs.ncloud.com/ja/ai-application-service/chatbot/)
+- [CLOVA Chatbot API Reference](https://api.ncloud-docs.com/docs/ja/ai-application-service-chatbot)
 
 CLOVA Chatbot Web Kit Demo page is [here](https://clovachatbot-webkit.line-scdn.net/samplepage/using-events/index.html) and, for more examples see [here](https://github.com/line/clova-chatbot-web-kit/blob/master/examples/README.md)
 
