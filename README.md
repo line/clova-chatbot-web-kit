@@ -10,13 +10,13 @@ CLOVA Chatbot has a powerful conversation model engine, so you can develop chatb
 For more information on [CLOVA Chatbot](https://clova.line.me/clova-chatbot/), see:
 
 - [CLOVA Chatbot](https://clova.line.me/clova-chatbot/)
-- [CLOVA Chatbot API Reference](https://api.ncloud-docs.com/docs/ja/ai-application-service-chatbot)
+- [CLOVA Chatbot API Reference](https://api.ncloud-docs.com/docs/en/ai-application-service-chatbot-chatbot)
 
 CLOVA Chatbot Web Kit Demo page is [here](https://clovachatbot-webkit.line-scdn.net/samplepage/using-events/index.html) and, for more examples see [here](https://github.com/line/clova-chatbot-web-kit/blob/master/examples/README.md)
 
 # How to use CLOVA Chatbot Web Kit
 
-First, create a bot using `CLOVA Chatbot`. Once the bot is created, you will need to obtain the bot's web chat `Secret Key` and `Invoke URL` in [CLOVA Chatbot Setting](https://docs.ncloud.com/en/chatbot/chatbot-2-5.html).
+First, create a bot using `CLOVA Chatbot`. Once the bot is created, you will need to obtain the bot's web chat `Secret Key` and `Invoke URL` in CLOVA Chatbot Setting.
 
 You will find the following information in [Messenger Connection] > [Custom].
 
