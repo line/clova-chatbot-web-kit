@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { useAction } from '../../hooks'
+import { StyleContext } from '../../context'
 
 const Wrapper = styled.div`
   position: relative;
@@ -47,9 +48,11 @@ const Image = (props) => {
   const imageUrl = data.imageUrl
   const action = data.action
   const [onAction] = useAction({ userId, onSendMessage })
+  const styles = useContext(StyleContext)
+  const { cardWidth } = styles
 
   return (
-    <Wrapper className="image" width={width}>
+    <Wrapper className="image" width={width || cardWidth}>
       {action ? (
         <ImageType
           src={imageUrl}
