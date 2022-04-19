@@ -6,7 +6,7 @@ const useAction = (props) => {
       case 'postback': {
         const params = {
           userId,
-          text: action.data && action.data.postback,
+          text: action.data?.postbackFull,
           event: 'send',
         }
         onSendMessage(params)
@@ -16,14 +16,14 @@ const useAction = (props) => {
         /* @todo */
         const params = {
           userId,
-          text: action.data && action.data.postback,
+          text: action.data?.postback,
           event: 'send',
         }
         onSendMessage(params)
         break
       }
       case 'link': {
-        if (action.data && action.data.url) {
+        if (action.data?.url) {
           window.open(action.data.url, '_blank')
         }
         break
@@ -32,7 +32,7 @@ const useAction = (props) => {
         /* @todo */
         const params = {
           userId,
-          number: action.data && action.data.number,
+          number: action.data?.number,
           event: 'send',
         }
         onSendMessage(params)
