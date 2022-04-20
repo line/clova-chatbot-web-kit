@@ -7,6 +7,7 @@ const useAction = (props) => {
         const params = {
           userId,
           text: action.data?.postbackFull,
+          userChatText: action.data?.postback,
           event: 'send',
         }
         onSendMessage(params)
@@ -17,6 +18,7 @@ const useAction = (props) => {
         const params = {
           userId,
           text: action.data?.postback,
+          userChatText: action.data?.text,
           event: 'send',
         }
         onSendMessage(params)
@@ -29,13 +31,7 @@ const useAction = (props) => {
         break
       }
       case 'phone': {
-        /* @todo */
-        const params = {
-          userId,
-          number: action.data?.number,
-          event: 'send',
-        }
-        onSendMessage(params)
+        /* @todo Create chatbot bubbles with a phone number and contact name */
         break
       }
     }

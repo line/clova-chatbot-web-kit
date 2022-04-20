@@ -48,7 +48,7 @@ const slice = createSlice({
   extraReducers: {
     [postActivity.pending]: (state, action) => {
       const { arg } = action.meta
-      const { event } = arg
+      const { userChatText, event } = arg
       const unixTimestamp = Math.floor(new Date().getTime())
 
       if (!event || event !== 'open') {
@@ -56,7 +56,7 @@ const slice = createSlice({
           user: 'user',
           data: {
             type: 'TEXT',
-            text: arg.text,
+            text: userChatText,
             event,
             timestamp: unixTimestamp,
           },
