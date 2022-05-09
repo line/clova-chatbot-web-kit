@@ -6,8 +6,8 @@ const useAction = (props) => {
       case 'postback': {
         const params = {
           userId,
-          text: action.data?.postbackFull,
-          userChatText: action.data?.postback,
+          text: action.data?.displayText || action.data?.postbackFull,
+          userChatText: action.data?.displayText || action.data?.postback,
           event: 'send',
         }
         onSendMessage(params)
