@@ -13,7 +13,9 @@ import { usePostMessage, useResponsive } from '../hooks'
 
 const Wrapper = styled.div`
   /* part of bootstrap reboot.css https://raw.githubusercontent.com/twbs/bootstrap/v4-dev/dist/css/bootstrap-reboot.css*/
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
   p {
