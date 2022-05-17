@@ -1,0 +1,269 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: CLOVA Chatbot
+paths:
+  /api/v2/message:
+    post:
+      summary: ''
+      operationId: 'examples'
+      requestBody:
+        description: request body
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: { }
+              examples:
+                example:
+                  value:
+                    version: 'v2'
+                    userId: 'U47b00b58c90f8e47428af8b7bddcda3d'
+                    sessionId: '34a59946-5dcb-4b72-9b63-a773c659702e'
+                    timestamp: 12345678
+                    bubbles:
+                      - type: 'text'
+                        data:
+                          description: 'description, optional: only description'
+                      - type: 'text'
+                        title: 'title, optional'
+                        subtitle: 'subTitle, optional'
+                        data:
+                          description: 'description, optional: full style, optional'
+                          url: 'http://www.ncloud.com'
+                          urlAlias: 'urlAlias, optional'
+                      - type: 'image'
+                        data:
+                          imageUrl: './images/kaisya_uketsuke_woman_skarf.png'
+                          imagePosition: 'bottom'
+                          description: 'description, optional: imagePosition is bottom,only have description'
+                      - type: 'template'
+                        data:
+                          cover:
+                            type: 'text'
+                            title: 'title, optional'
+                            subTitle: 'subTitle, optional'
+                            data:
+                              description: 'description, optional: text full style'
+                              url: 'http://www.ncloud.com'
+                              urlAlias: 'urlAlias, optional'
+                          contentTable:
+                            -
+                              - colSpan: 1
+                                rowSpan: 1
+                                data:
+                                  type: 'button'
+                                  title: 'basic button, a link'
+                                  data:
+                                    type: 'basic'
+                                    action:
+                                      type: 'link'
+                                      data:
+                                        url: 'http://www.ncloud.com'
+                              - colSpan: 1
+                                rowSpan: 1
+                                data:
+                                  type: 'button'
+                                  title: 'basic button, a link'
+                                  data:
+                                    type: 'basic'
+                                    action:
+                                      type: 'link'
+                                      data:
+                                        url: 'http://www.ncloud.com'
+                      - type: 'template'
+                        data:
+                          cover:
+                            type: 'image'
+                            title: 'title, optional'
+                            subTitle: 'subTitle, optional'
+                            data:
+                              imageUrl: './images/kaisya_uketsuke_woman_skarf.png'
+                              alt: 'alt, hover, optional'
+                              description: 'description, optional: imagePosition is top full style'
+                              url: 'http://www.ncloud.com'
+                              urlAlias: 'urlAlias, optional'
+                              action:
+                                type: 'link'
+                                data:
+                                  url: 'http://www.ncloud.com'
+                                  mobileUrl: 'http://m.ncloud.com'
+                          contentTable:
+                            - - colSpan: 1
+                                rowSpan: 1
+                                data:
+                                  type: 'button'
+                                  title: 'basic button, a link'
+                                  data:
+                                    type: 'basic'
+                                    action:
+                                      type: 'link'
+                                      data:
+                                        url: 'http://www.ncloud.com'
+                              - colSpan: 1
+                                rowSpan: 1
+                                data:
+                                  type: 'button'
+                                  title: 'basic button, a link'
+                                  data:
+                                    type: 'basic'
+                                    action:
+                                      type: 'link'
+                                      data:
+                                        url: 'http://www.ncloud.com'
+                      - type: 'carousel'
+                        data:
+                          cards:
+                            - type: 'template'
+                              data:
+                                cover:
+                                  type: 'image'
+                                  title: 'title, optional'
+                                  subTitle: 'subTitle, optional'
+                                  data:
+                                    imageUrl: './images/kaisya_uketsuke_woman_skarf.png'
+                                    alt: 'alt, hover, optional'
+                                    description: 'description, optional: imagePosition is top full style'
+                                    url: 'http://www.ncloud.com'
+                                    urlAlias: 'urlAlias, optional'
+                                    action:
+                                      type: 'link'
+                                      data:
+                                        url: 'http://www.ncloud.com'
+                                        mobileUrl: 'http://m.ncloud.com'
+                                contentTable:
+                                  - - colSpan: 1
+                                      rowSpan: 1
+                                      data:
+                                        type: 'button'
+                                        title: 'basic button, a link'
+                                        data:
+                                          type: 'basic'
+                                          action:
+                                            type: 'link'
+                                            data:
+                                              url: 'http://www.ncloud.com'
+                                    - colSpan: 1
+                                      rowSpan: 1
+                                      data:
+                                        type: 'button'
+                                        title: 'basic button, a link'
+                                        data:
+                                          type: 'basic'
+                                          action:
+                                            type: 'link'
+                                            data:
+                                              url: 'http://www.ncloud.com'
+                            - type: 'template'
+                              data:
+                                cover:
+                                  type: 'image'
+                                  title: 'title, optional'
+                                  subTitle: 'subTitle, optional'
+                                  data:
+                                    imageUrl: './images/nigaoe_carolus_fridericus_gauss.png'
+                                    alt: 'alt, hover, optional'
+                                    description: 'description, optional: imagePosition is top full style'
+                                    url: 'http://www.ncloud.com'
+                                    urlAlias: 'urlAlias, optional'
+                                    action:
+                                      type: 'link'
+                                      data:
+                                        url: 'http://www.ncloud.com'
+                                        mobileUrl: 'http://m.ncloud.com'
+                                contentTable:
+                                  - - colSpan: 1
+                                      rowSpan: 1
+                                      data:
+                                        type: 'button'
+                                        title: 'basic button, a link'
+                                        data:
+                                          type: 'basic'
+                                          action:
+                                            type: 'link'
+                                            data:
+                                              url: 'http://www.ncloud.com'
+                                    - colSpan: 1
+                                      rowSpan: 1
+                                      data:
+                                        type: 'button'
+                                        title: 'basic button, a link'
+                                        data:
+                                          type: 'basic'
+                                          action:
+                                            type: 'link'
+                                            data:
+                                              url: 'http://www.ncloud.com'
+                            - type: 'template'
+                              data:
+                                cover:
+                                  type: 'image'
+                                  title: 'title, optional'
+                                  subTitle: 'subTitle, optional'
+                                  data:
+                                    imageUrl: './images/shigoto_zaitaku_cat_woman.png'
+                                    alt: 'alt, hover, optional'
+                                    description: 'description, optional: imagePosition is top full style'
+                                    url: 'http://www.ncloud.com'
+                                    urlAlias: 'urlAlias, optional'
+                                    action:
+                                      type: 'link'
+                                      data:
+                                        url: 'http://www.ncloud.com'
+                                        mobileUrl: 'http://m.ncloud.com'
+                                contentTable:
+                                  - - colSpan: 1
+                                      rowSpan: 1
+                                      data:
+                                        type: 'button'
+                                        title: 'basic button, a link'
+                                        data:
+                                          type: 'basic'
+                                          action:
+                                            type: 'link'
+                                            data:
+                                              url: 'http://www.ncloud.com'
+                                    - colSpan: 1
+                                      rowSpan: 1
+                                      data:
+                                        type: 'button'
+                                        title: 'basic button, a link'
+                                        data:
+                                          type: 'basic'
+                                          action:
+                                            type: 'link'
+                                            data:
+                                              url: 'http://www.ncloud.com'
+                    quickButtons:
+                      - type: 'button'
+                        title: 'no icon'
+                        data:
+                          type: 'basic'
+                          action:
+                            type: 'postback'
+                            data:
+                              postback: 'hello'
+                      - type: 'button'
+                        title: 'phone'
+                        data:
+                          type: 'basic'
+                          action:
+                            type: 'phone'
+                            data:
+                              number: '400-1111-1111'
+                      - type: 'button'
+                        title: 'pay'
+                        data:
+                          type: 'basic'
+                          action:
+                            type: 'link'
+                            data:
+                              url: 'http://www.ncloud.com'
+                    event: 'send'
