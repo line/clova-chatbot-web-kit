@@ -11,11 +11,11 @@ const Wrapper = styled.div`
   margin: 0;
   word-break: break-all;
   overflow: hidden;
-  background-color: azure;
-  border-top: 1px solid #eee;
+  background-color: ${(props) => props.backgroundColor};
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px 16px;
   font-size: ${(props) => props.fontSize};
-  color: #007bff;
+  color: ${(props) => props.color};
   .icon {
     display: inline-block;
     position: absolute;
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   transition: all 0.2s ease-in-out;
   :hover {
     cursor: pointer;
-    color: #0056b3;
+    opacity: 0.9;
   }
 `
 
@@ -52,11 +52,15 @@ const Button = (props) => {
   const { userId, title, data, onSendMessage } = props
   const [onAction] = useAction({ userId, onSendMessage })
   const styles = useContext(StyleContext)
-  const { bubbleFontSize } = styles
+  const { bubbleFontSize, buttonColor, buttonBackgroundColor } = styles
 
   if (data && data.action) {
     return (
-      <Wrapper fontSize={bubbleFontSize}>
+      <Wrapper
+        fontSize={bubbleFontSize}
+        color={buttonColor}
+        backgroundColor={buttonBackgroundColor}
+      >
         <div onClick={() => onAction(data)}>
           <MdKeyboardArrowRight className="icon" />
           <p>{title}</p>
