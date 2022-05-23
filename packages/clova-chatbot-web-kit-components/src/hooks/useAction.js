@@ -31,7 +31,9 @@ const useAction = (props) => {
         break
       }
       case 'phone': {
-        /* @todo Create chatbot bubbles with a phone number and contact name */
+        if (action.data?.number) {
+          window.location.href = `tel:${action.data?.number}`
+        }
         break
       }
     }
