@@ -27,6 +27,10 @@ export const defaultStyles = {
   userBubbleColor: '',
   userBubbleBackgroundColor: '',
   userBubbleFontSize: '',
+  buttonColor: '#007bff',
+  buttonBackgroundColor: '#f0ffff',
+  linkColor: '#007bff',
+  linkHoverColor: '#0056b3',
 }
 
 export const StyleContext = React.createContext(defaultStyles)

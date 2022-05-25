@@ -34,7 +34,7 @@ Properties of `webchat.js` are defined in [main.js](main.js). In this sample, th
 All properties are shown in the table below.
 
 | Property                  | Description                                                             |
-| ------------------------- | ----------------------------------------------------------------------- |
+|---------------------------|-------------------------------------------------------------------------|
 | apiPath                   | Proxy server path                                                       |
 | width                     | Chat box width                                                          |
 | height                    | Chat box height                                                         |
@@ -44,7 +44,7 @@ All properties are shown in the table below.
 | backgroundColor           | Chat box background color                                               |
 | backgroundImage           | Chat box background image                                               |
 | avatarBackgroundColor     | Avatar background color                                                 |
-| avatarImage　　　　　　　　　　　　　　　　　　　　     | Avatar background image                                                 |
+| avatarImage               | Avatar background image                                                 |
 | bubbleStyle               | Default bubble edge style ( `rounded` or `square`)                      |
 | bubbleRadius              | Default bubble edge rounding when `bubbleStyle` is `rounded`            |
 | bubbleColor               | Default bubble font color                                               |
@@ -59,8 +59,12 @@ All properties are shown in the table below.
 | borderTopRightRadius      | Radius of the Top-Right                                                 |
 | borderBottomRightRadius   | Radius of the Bottom-left                                               |
 | borderBottomLeftRadius    | Radius of the Bottom-Right                                              |
-| headerColor               | Header color                                                            |
+| headerColor               | Header font color                                                       |
 | headerBackgroundColor     | Header background color                                                 |
+| buttonColor               | Button font color                                                       |
+| buttonBackgroundColor     | Button background color                                                 |
+| linkColor                 | Link font color                                                         |
+| linkHoverColor            | Link font color when hovered                                            |
 
 # Events
 

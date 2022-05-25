@@ -23,12 +23,12 @@ const Wrapper = styled.div`
     //margin-bottom: 1rem;
   }
   a {
-    color: #007bff;
+    color: ${(props) => props.linkColor};
     text-decoration: none;
     background-color: transparent;
   }
   a:hover {
-    color: #0056b3;
+    color: ${(props) => props.linkHoverColor};
     text-decoration: underline;
   }
   a:not([href]):not([class]) {
@@ -108,6 +108,8 @@ const WebChat = (props) => {
     borderBottomLeftRadius,
     borderBottomRightRadius,
     headerHeight,
+    linkColor,
+    linkHoverColor,
   } = styles
 
   const isMobile = useMediaQuery({ query: '(max-width: 575px)' })
@@ -128,6 +130,8 @@ const WebChat = (props) => {
       borderTopRightRadius={borderTopRightRadius}
       borderBottomLeftRadius={borderBottomLeftRadius}
       borderBottomRightRadius={borderBottomRightRadius}
+      linkColor={linkColor}
+      linkHoverColor={linkHoverColor}
     >
       <WebChatHeader
         title={title}
