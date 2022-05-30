@@ -14,6 +14,7 @@
     "copy": "cpx -C packages/clova-chatbot-web-kit-bundle/dist/** packages/clova-chatbot-web-kit-server/static",
     "start": "lerna run --stream --scope @line/clova-chatbot-web-kit-server start",
     "start-dev": "lerna run --stream --scope @line/clova-chatbot-web-kit-server start-dev",
+    "start-mock": "prism mock examples/5.using-with-api-mock/openapispec.yml",
     "start-javascript-sample": "",
     "lint": "lerna run --stream lint"
   },
@@ -28,6 +29,7 @@
     "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@stoplight/prism-cli": "^4.8.0",
     "core-js": "^3.6.5",
     "cpx": "^1.5.0",
     "cross-env": "^7.0.2",
