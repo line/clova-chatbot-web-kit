@@ -44,6 +44,19 @@ const env = {
 }
 ```
 
+If you prefer to use FaaS (Function-as-a-Service) like AWS Lambda, set the `Secret Key` and `Invoke URL` in the `.env` file in the `serverless` directory.
+
+
+```
+#serverless/.env
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+CLOVA_SECRET_KEY=
+CLOVA_INVOKE_URL=
+CLOVA_ALLOW_URL=[]
+```
+
 ### Integrating with CDN
 
 If you don't want to build and host `webchat.js` yourself, you can include it from a CDN (Content Delivery Network).
@@ -158,8 +171,42 @@ yarn start-dev
 [View the complete list of web chat samples](./examples/README.md) for more ideas on customizing a web chat.
 
 # Deployment
+### Deploy and run the proxy server on AWS:
 
-Deploy and run the proxy server on Heroku:
+First, move into the `serverless` directory.
+
+Install the serverless project.
+
+```
+yarn install
+```
+
+Create IAM role for deploying AWS Serverless app and give it `AdministratorAccess` policy, and then set environment variables in `.env` file.
+
+```
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+CLOVA_SECRET_KEY=
+CLOVA_INVOKE_URL=
+CLOVA_ALLOW_URL=[]
+```
+
+Deploying to AWS
+```
+yarn deploy
+```
+
+Remove from AWS
+```
+sls remove
+
+or
+
+serverless remove
+```
+
+
+### Deploy and run the proxy server on Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
