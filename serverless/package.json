@@ -1,0 +1,21 @@
+{
+  "name": "serverless-webchat-proxy",
+  "version": "1.0.0",
+  "main": "",
+  "repository": "https://github.com/line/clova-chatbot-web-kit.git",
+  "author": "LINE CLOVA",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "deploy": "./deploy.sh"
+  },
+  "devDependencies": {
+    "serverless": "^3.19.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "serverless-http": "^3.0.1"
+  }
+}

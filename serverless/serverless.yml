@@ -1,0 +1,31 @@
+service: serverless-webchat-proxy
+frameworkVersion: '3'
+useDotenv: true
+
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs14.x
+  region: ap-northeast-1
+  timeout: 30
+  environment:
+    CLOVA_SECRET_KEY: ${env:CLOVA_SECRET_KEY}
+    CLOVA_INVOKE_URL: ${env:CLOVA_INVOKE_URL}
+    CLOVA_ALLOW_URL: ${env:CLOVA_ALLOW_URL}
+
+package:
+  patterns:
+    - '!deploy.sh'
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
