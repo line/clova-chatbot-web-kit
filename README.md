@@ -1,3 +1,6 @@
+### ⚠️ This repository will be archived
+We decided to archive the project at May 2023.
+
 # CLOVA Chatbot Web Kit
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
