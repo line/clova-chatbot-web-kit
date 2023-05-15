@@ -1,5 +1,5 @@
-### ⚠️ This repository will be archived
-We decided to archive the project at May 2023.
+### ⚠️ This repository is no longer active
+This repository is no longer actively maintained.
 
 # CLOVA Chatbot Web Kit
 
